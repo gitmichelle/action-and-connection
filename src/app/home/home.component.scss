@@ -32,28 +32,40 @@ nav {
 }
 
 .circle-links {
-  display: flex;
-  justify-content: center;
+  height: 500px;
+  .circles {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    .act {
+      @include flex(flex, center, center);
+      margin: 5% ;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-color: $red;
+    }
+    .volunteer {
+      margin: 5%;
+      @include flex(flex, center, center);
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-color: $yellow;
+    }
+    .connect {
+      margin: 5%;
+      @include flex(flex, center, center);
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-color: $blue;
+    }
+  }
+}
 
-  .act {
-    @include flex(flex, center, center);
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: $red;
-  }
-  .volunteer {
-    @include flex(flex, center, center);
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: $red;
-  }
-  .connect {
-    @include flex(flex, center, center);
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: $red;
-  }
+.call {
+  height: 300px;
+  background-color: #465066;
+  color: white;
 }
