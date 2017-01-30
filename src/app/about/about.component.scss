@@ -1,0 +1,16 @@
+//fonts
+$header-font: 'Fjalla One', sans-serif;
+$body-font: 'Lato', sans-serif;
+
+//colors
+$red: #c91435;
+$blue: #103556;
+$white: #f6f7eb;
+$yellow: #ffd449;
+$black: #2b2b2b;
+
+
+p {
+  font-family: $header-font;
+  color: $red;
+}
