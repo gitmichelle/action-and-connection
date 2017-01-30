@@ -9,6 +9,14 @@ $white: #f6f7eb;
 $yellow: #ffd449;
 $black: #2b2b2b;
 
+//mixins
+@mixin flex($display: null, $justify: null, $align: null) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+
+}
+
 
 //styling
 nav {
@@ -20,5 +28,32 @@ nav {
   font-family: $header-font;
   a{
     color: $black !important;
+  }
+}
+
+.circle-links {
+  display: flex;
+  justify-content: center;
+
+  .act {
+    @include flex(flex, center, center);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: $red;
+  }
+  .volunteer {
+    @include flex(flex, center, center);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: $red;
+  }
+  .connect {
+    @include flex(flex, center, center);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: $red;
   }
 }
