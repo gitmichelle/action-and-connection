@@ -8,21 +8,20 @@ $blue: #103556;
 $white: #f6f7eb;
 $yellow: #ffd449;
 $black: #2b2b2b;
+$connect-blue: #0353A4;
 
 //mixins
 @mixin flex($display: null, $justify: null, $align: null) {
   display: $display;
   justify-content: $justify;
   align-items: $align;
-
 }
-
 
 //styling
 nav {
   box-shadow: none !important;
   background-color: white !important;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $red;
   height: 10vh;
   padding: .5%;
 
@@ -30,14 +29,24 @@ nav {
 .nav-wrapper {
   background-color: white !important;
   font-family: $header-font;
+  #plus {
+    color: $red;
+  }
   img {
     margin-left: 2%;
     width: 5.25%;
     height: auto;
     margin-right: .75%;
   }
-  a{
-    color: $black !important;
+  a {
+    color: $blue !important;
+    &:hover {
+      color: $red !important;
+    }
+  }
+  .brand-logo{
+    color: $blue !important;
+    letter-spacing: .5px;
   }
   ul{
     margin-right: 2%;
@@ -46,24 +55,72 @@ nav {
 
 .circle-links {
   height: 45vh;
+  .title-one{
+    text-align: center;
+    width: 100vw;
+    margin-top: 5%;
+    font-family: $body-font;
+    color: $blue;
+    h2{
+      color: $blue;
+      letter-spacing: 4px;
+      font-size: 4.7em;
+    }
+  }
   .circles {
+    .arrow {
+      margin-top: auto;
+      margin-bottom: auto;
+      i{
+        color: $blue;
+      }
+    }
+    .overlay {
+      position: relative;
+    }
+    .overlay:after {
+      position: absolute;
+      content:"";
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      opacity:0;
+      border-radius: 50%;
+    }
+    .overlay:hover:after  {
+      opacity: .5;
+    }
     a{
       font-family: $header-font;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       color: $white;
       font-size: 2em;
-      text-shadow: 2px 2px 4px #000000; 
+      text-shadow: 2px 2px 4px #000000;
     }
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+
     .act {
       @include flex(flex, center, center);
       margin: 5% ;
       width: 250px;
       height: 250px;
       border-radius: 50%;
-      background-color: $red;
+      // background-color: $red;
+      background-image: url('assets/image/act-phone.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      &:hover {
+        transform: scale(1.1,1.1);
+      }
+      &:after {
+        background-color: $red;
+        transition-duration: 0.4s;
+        transition-timing-function: initial;
+        transition-delay: initial;
+      }
     }
     .volunteer {
       margin: 5%;
@@ -71,7 +128,20 @@ nav {
       width: 250px;
       height: 250px;
       border-radius: 50%;
-      background-color: $yellow;
+      // background-color: $yellow;
+      background-image: url('assets/image/volunteer-hands.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      &:hover {
+        transform: scale(1.1,1.1);
+      }
+      &:after {
+        background-color: $yellow;
+        transition-duration: 0.4s;
+        transition-timing-function: initial;
+        transition-delay: initial;
+      }
     }
     .connect {
       margin: 5%;
@@ -79,7 +149,19 @@ nav {
       width: 250px;
       height: 250px;
       border-radius: 50%;
-      background-color: $blue;
+      background-image: url('assets/image/hands-shaking.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      &:hover {
+        transform: scale(1.1,1.1);
+      }
+      &:after {
+        background-color: $connect-blue;
+        transition-duration: 0.2s;
+        transition-timing-function: initial;
+        transition-delay: initial;
+      }
     }
   }
 }
@@ -89,8 +171,20 @@ nav {
   padding: 5%;
   background-color: #8792A3;
   color: white;
+  h5 {
+    margin-left: 5%;
+    font-family: $header-font;
+    letter-spacing: 1.5px;
+    font-size: 2em;
+
+  }
   p {
     font-family: $body-font;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 130%;
+    letter-spacing: 1px;
+    font-size: 1.16em;
   }
 }
 
@@ -119,25 +213,6 @@ nav {
         }
       }
     }
-    // .box {
-    //   height: 300px;
-    //   width: 500px;
-    //   background-color: white;
-    //   padding:  45px;
-    //   position: absolute;
-    //   margin-left: 400px;
-    //   border: 1px solid black;
-    //
-    //   #phone {
-    //     position: relative;
-    //     right: -350px;
-    //     top: -230px;
-    //     transform: rotate(-20deg);
-    //     img {
-    //       height: 400px;
-    //     }
-    //   }
-    // }
   }
 
   .middle {
@@ -180,7 +255,7 @@ nav {
     padding:  45px;
     position: relative;
     margin-right: 20px;
-    border: 1px solid $blue;
+    border: 1px solid $connect-blue;
 
     #hands-hold {
       position: absolute;
