@@ -18,40 +18,7 @@ $connect-blue: #0353A4;
 }
 
 //styling
-nav {
-  box-shadow: none !important;
-  background-color: white !important;
-  border-bottom: 1px solid $red;
-  height: 10vh;
-  padding: .5%;
 
-}
-.nav-wrapper {
-  background-color: white !important;
-  font-family: $header-font;
-  #plus {
-    color: $red;
-  }
-  img {
-    margin-left: 2%;
-    width: 5.25%;
-    height: auto;
-    margin-right: .75%;
-  }
-  a {
-    color: $blue !important;
-    &:hover {
-      color: $red !important;
-    }
-  }
-  .brand-logo{
-    color: $blue !important;
-    letter-spacing: .5px;
-  }
-  ul{
-    margin-right: 2%;
-  }
-}
 
 .circle-links {
   height: 45vh;
@@ -107,7 +74,6 @@ nav {
       width: 250px;
       height: 250px;
       border-radius: 50%;
-      // background-color: $red;
       background-image: url('assets/image/act-phone.jpg');
       background-size: cover;
       background-position: center;
@@ -128,7 +94,6 @@ nav {
       width: 250px;
       height: 250px;
       border-radius: 50%;
-      // background-color: $yellow;
       background-image: url('assets/image/volunteer-hands.jpg');
       background-size: cover;
       background-position: center;
@@ -176,7 +141,6 @@ nav {
     font-family: $header-font;
     letter-spacing: 1.5px;
     font-size: 2em;
-
   }
   p {
     font-family: $body-font;
@@ -189,24 +153,37 @@ nav {
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
   .top {
-    height: 60vh;
+    margin-left: 35%;
+    height: 27vh;
     background-color: white;
-    padding-left: 110px;
-    padding-top: 125px;
+    margin-top: 13%;
+    // padding-left: 10%;
+    // padding-top: 125px;
     .box {
       height: 300px;
-      width: 500px;
+      width: 600px;
+      h4 {
+        font-family: $header-font;
+        letter-spacing: 2px;
+        color: darken($blue, 20%);
+      }
+      p {
+        font-family: $body-font;
+        color: $blue;
+      }
       background-color: white;
-      padding:  45px;
+      // padding:  45px;
       position: relative;
-      margin-left: 400px;
-      border: 1px solid $red;
+      // margin-left: 400px;
+      border: 3px solid $red;
 
       #phone {
         position: absolute;
         right: -290px;
-        top: -100px;
+        top: -99px;
         transform: rotate(-20deg);
         img {
           height: 400px;
@@ -216,22 +193,33 @@ nav {
   }
 
   .middle {
-    height: 60vh;
+    height: 35vh;
     background-color: white;
     padding-left: 400px;
     padding-top: 125px;
     .box {
       height: 300px;
-      width: 500px;
+      width: 550px;
       background-color: white;
       padding:  45px;
       position: relative;
       margin-right: 20px;
-      border: 1px solid $yellow;
+      border: 3px solid $yellow;
+
+      h4 {
+        font-family: $header-font;
+        letter-spacing: 2px;
+        color: darken($blue, 20%);
+      }
+      p {
+        font-family: $body-font;
+        color: $blue;
+        margin-left: 2%;
+      }
 
       #heart {
         position: absolute;
-        right: 475px;
+        right: 500px;
         top: 0;
         transform: rotate(-20deg);
         img {
@@ -243,23 +231,35 @@ nav {
   }
 
   .bottom {
-    height: 60vh;
+    margin-left: 35%;
+    height: 30vh;
     background-color: white;
-    padding-left: 400px;
-    padding-top: 125px;
+    margin-top: 10%;
+    // padding-left: 400px;
+    // padding-top: 125px;
   }
   .box {
     height: 300px;
-    width: 500px;
+    width: 600px;
     background-color: white;
     padding:  45px;
     position: relative;
     margin-right: 20px;
-    border: 1px solid $connect-blue;
+    border: 3px solid $connect-blue;
+
+    h4 {
+      font-family: $header-font;
+      letter-spacing: 2px;
+      color: darken($blue, 20%);
+    }
+    p {
+      font-family: $body-font;
+      color: $blue;
+    }
 
     #hands-hold {
       position: absolute;
-      left: 250px;
+      left: 320px;
       top: 0;
       // transform: rotate(-25deg);
       img {

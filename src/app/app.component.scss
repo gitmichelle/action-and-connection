@@ -1,0 +1,53 @@
+//fonts
+$header-font: 'Fjalla One', sans-serif;
+$body-font: 'Lato', sans-serif;
+
+//colors
+$red: #c91435;
+$blue: #103556;
+$white: #f6f7eb;
+$yellow: #ffd449;
+$black: #2b2b2b;
+$connect-blue: #0353A4;
+
+//mixins
+@mixin flex($display: null, $justify: null, $align: null) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+nav {
+  box-shadow: none !important;
+  background-color: white !important;
+  border-bottom: 1px solid $red;
+  height: 10vh;
+  padding: .5%;
+
+}
+.nav-wrapper {
+  background-color: white !important;
+  font-family: $header-font;
+  #plus {
+    color: $red;
+  }
+  img {
+    margin-left: 2%;
+    width: 5.25%;
+    height: auto;
+    margin-right: .75%;
+  }
+  a {
+    color: $blue !important;
+    &:hover {
+      color: $red !important;
+    }
+  }
+  .brand-logo{
+    color: $blue !important;
+    letter-spacing: .5px;
+  }
+  ul{
+    margin-right: 2%;
+  }
+}
