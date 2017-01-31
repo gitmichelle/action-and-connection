@@ -180,6 +180,17 @@ $connect-blue: #0353A4;
       // margin-left: 400px;
       border: 3px solid $red;
 
+      .overlay {
+        position: absolute;
+        left: 568px;
+        top: -55px;
+        height: 205px;
+        width: 100px;
+        background: white;
+        transform: rotate(-20deg);
+      }
+
+
       #phone {
         position: absolute;
 
@@ -243,6 +254,20 @@ $connect-blue: #0353A4;
       margin-right: 20px;
       border: 3px solid $yellow;
 
+      .overlay {
+        position: absolute;
+        left: -209px;
+        top: 60px;
+        height: 115px;
+        width: 100px;
+        background: $yellow;
+      }
+      .scroll-box {
+      width: 100%;
+      position: fixed;
+      z-index: -1;
+    }
+
       h4 {
         font-family: $header-font;
         letter-spacing: 2px;
@@ -292,6 +317,17 @@ $connect-blue: #0353A4;
     p {
       font-family: $body-font;
       color: $blue;
+    }
+
+    .overlay {
+      position: absolute;
+      left: 455px;
+      // top: -55px;
+      height: 250px;
+      width: 200px;
+      background: white;
+      transform: rotate(90deg);
+      border-radius: 25%;
     }
 
     #hands-hold {
