@@ -14,18 +14,24 @@ import 'rxjs/add/operator/toPromise';
   providers: [DataService]
 })
 export class HomeComponent implements OnInit {
-  data;
+  dataContents;
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
   }
-  
+
+
+
   apiCall() {
-    this.data = this.dataService.getData();
-    console.log(this.data);
-    console.log("hello");
-  }
+    this.dataService.getData().subscribe(response => {
+      this.dataContents = response;
+      this.dataContents = JSON.parse(this.dataContents._body);
+      console.log(this.dataContents);
+      // return data.json();
+
+    }
+  )};
 
 
 }
