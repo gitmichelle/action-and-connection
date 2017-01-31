@@ -14,13 +14,15 @@ export class DataService {
     console.log("in data"+data);
   }
   getData() {
-    return this.http.get(this.jsonUrl).map(this.extractData);
+    return this.http.get(this.jsonUrl).subscribe(
+      (data) => console.log(data)
+    );
   }
 
-  private extractData(res: Response) {
-    let body = res.json();
-    console.log(body)
-    return body.data || { };
-  }
+  // private extractData(res: Response) {
+  //   let body = res.json();
+  //   console.log(body)
+  //   return body.data || { };
+  // }
 
 }
