@@ -7,22 +7,60 @@ h1, h3 {
   font-family: $header-font;
 }
 
+h3 {
+  background-color: #1ef3f1;
+  padding: 10px;
+}
+
 .container {
   display: flex;
   justify-content: center;
 
   .card {
     width: 90vw;
-    height: 25em;
+    height: 50em;
     border: 1px solid black;
     margin-top: 100px;
     position: relative;
     padding: 5em 2em 2em 2em;
 
-    h4 {
-
+    a {
+      color: #FF0009;
     }
 
+    .flex-container {
+     display: -webkit-flex;
+     display: flex;
+     -webkit-flex-direction: row;
+     flex-direction: row;
+     -webkit-align-items: center;
+     align-items: center;
+     flex-wrap: wrap;
+     min-width: 320px;
+     max-width: 1220px;
+     margin-left: auto;
+     margin-right: auto;
+
+        .flex-item {
+        display:flex;
+        align-items: center;
+        height: 20em;
+        width: 100%;
+        border: 1px solid #626262;
+        margin: 3px;
+        padding: 20px;
+
+          .infoList {
+            margin-left: 1em;
+          }
+
+          img {
+            flex-grow: 0;
+            flex-shrink: 2;
+            border-radius: 50%;
+          }
+        }
+      }
 
 
     .banner {
