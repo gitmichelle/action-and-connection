@@ -6,7 +6,7 @@ import { AboutComponent } from '../about/about.component';
 @Component({
   selector: 'app-act',
   templateUrl: './act.component.html',
-  styleUrls: ['./act.component.css']
+  styleUrls: ['./act.component.scss']
 })
 export class ActComponent implements OnInit {
 
