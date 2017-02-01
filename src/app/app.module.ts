@@ -11,7 +11,7 @@ import { ConnectComponent } from './connect/connect.component';
 import { AboutComponent } from './about/about.component';
 import { AngularFireModule } from 'angularfire2';
 import { masterFirebaseConfig } from './api-keys';
-import { AuthComponent } from './auth/auth.component';
+// import { AuthComponent } from './auth/auth.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthModule }  from './auth/auth.module';
 import { LoginRoutingModule }      from './login-routing.module';
@@ -45,7 +45,7 @@ export const firebaseConfig = {
     VolunteerComponent,
     ConnectComponent,
     AboutComponent,
-    AuthComponent,
+    // AuthComponent,
     LoginComponent,
 
   ],
