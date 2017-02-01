@@ -11,6 +11,24 @@ import { ConnectComponent } from './connect/connect.component';
 import { AboutComponent } from './about/about.component';
 import { AngularFireModule } from 'angularfire2';
 import { masterFirebaseConfig } from './api-keys';
+import { AuthComponent } from './auth/auth.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AuthModule }  from './auth/auth.module';
+import { LoginRoutingModule }      from './login-routing.module';
+import { LoginComponent }          from './login.component';
+import { AppRoutingModule }        from './app-routing.module';
+
+const appRoutes: Routes = [
+  {
+    path: 'act', component: ActComponent
+  },
+  {
+    path: 'volunteer', component: VolunteerComponent
+  },
+  {
+    path: 'connect', component: ConnectComponent
+  },
+]
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,16 +44,31 @@ export const firebaseConfig = {
     ActComponent,
     VolunteerComponent,
     ConnectComponent,
-    AboutComponent
+    AboutComponent,
+    AuthComponent,
+    LoginComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AuthModule,
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AppRoutingModule,
+    LoginRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  // Diagnostic only: inspect router configuration
+
+  // constructor(router: Router) {
+  //   console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  // }
+}
