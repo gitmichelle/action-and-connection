@@ -3,8 +3,8 @@ $header-font: 'Fjalla One', sans-serif;
 $body-font: 'Lato', sans-serif;
 
 //colors
-$red: #c91435;
-$blue: #103556;
+$red : #FF0009;
+$blue: #1ef3f1;
 $white: #f6f7eb;
 $yellow: #ffd449;
 $black: #2b2b2b;
@@ -29,7 +29,7 @@ $connect-blue: #0353A4;
     font-family: $body-font;
     color: $blue;
     h2{
-      color: $blue;
+      color: $black;
       letter-spacing: 4px;
       font-size: 4.7em;
     }
@@ -39,7 +39,7 @@ $connect-blue: #0353A4;
       margin-top: auto;
       margin-bottom: auto;
       i{
-        color: $blue;
+        color: darken($blue, 10%);
       }
     }
     .overlay {
@@ -122,7 +122,7 @@ $connect-blue: #0353A4;
         transform: scale(1.1,1.1);
       }
       &:after {
-        background-color: $connect-blue;
+        background-color: $blue;
         transition-duration: 0.2s;
         transition-timing-function: initial;
         transition-delay: initial;
@@ -141,6 +141,7 @@ $connect-blue: #0353A4;
     font-family: $header-font;
     letter-spacing: 1.5px;
     font-size: 2em;
+
   }
   p {
     font-family: $body-font;
@@ -168,11 +169,11 @@ $connect-blue: #0353A4;
       h4 {
         font-family: $header-font;
         letter-spacing: 2px;
-        color: darken($blue, 20%);
+        color: darken($blue, 10%);
       }
       p {
         font-family: $body-font;
-        color: $blue;
+        color: black;
       }
       background-color: white;
       // padding:  45px;
@@ -271,11 +272,11 @@ $connect-blue: #0353A4;
       h4 {
         font-family: $header-font;
         letter-spacing: 2px;
-        color: darken($blue, 20%);
+        color: darken($blue, 10%);
       }
       p {
         font-family: $body-font;
-        color: $blue;
+        color: $black;
         margin-left: 2%;
       }
 
@@ -307,16 +308,17 @@ $connect-blue: #0353A4;
     padding:  45px;
     position: relative;
     margin-right: 20px;
-    border: 3px solid $connect-blue;
+    border: 3px solid $blue;
 
     h4 {
       font-family: $header-font;
       letter-spacing: 2px;
-      color: darken($blue, 20%);
+      color: darken($blue, 10%);
     }
     p {
       font-family: $body-font;
-      color: $blue;
+      color: $black;
+      margin-left: 2%;
     }
 
     .overlay {
