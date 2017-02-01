@@ -36,6 +36,9 @@ nav {
     width: 5.25%;
     height: auto;
     margin-right: .75%;
+    &:hover {
+      transform: scale(1.1,1.1);
+    }
   }
   a {
     color: $blue !important;
