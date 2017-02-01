@@ -1,0 +1,53 @@
+{
+  "connect": [{
+    "image": "../assets/image/book.jpg",
+    "title": "First Thursday Book Club",
+    "date": "Thursday, February 2, 2017",
+    "time": "6:00 PM to 8:00 PM",
+    "location": "Studio Nia",
+    "detailedLocation": "918 SW Yamhill Street, 4th Floor, Portland, OR ",
+    "description": "Joseph Wachunas will resume meetings of the First Thursday Book Club (FTBC) in February. This particular meetup is best suited for adults with an Intermediate to advanced level knowledge of the Italian language. Please join Joe in reading La testa degli Italiani by Beppe Severgnini. It is recommended that participants have both versions of the text, Italian and English. The English version is titled La Bella Figura. A free pdf version in Italian is available.", "siteUrl":"https://www.meetup.com/Italian-Language-Culture-Connect-OR/events/236608239/"
+  }, {"image": "../assets/image/foodmedicine.jpg",
+    "title": "PUBLIC EVENT: Food as Medicine Fourth Annual Symposium",
+    "date": "Saturday, February 11, 2017",
+    "time": "8:30 AM to 7:00 PM",
+    "location": "National University of Natural Medicine",
+    "detailedLocation": "49 SW Porter Street, Portland, OR",
+    "description": "Interested in fermentation, urban farming or the beauty of embracing food as medicine? Join us for this one day event with our special guest speakers: Sandor Katz, author of The Art of Fermentation, Liz Boggs, co-owner of Heart to Heart Farms and the lead physicians of the Food as Medicine Institute, Drs. Julie Briley and Courtney Jackson.    This event is perfect for anyone that wants to learn how to optimize their health with the foods they eat every day. Everyone is invited! Individuals, families, foodies, chefs, and anyone interested in deepening their knowledge of nutrition and learning practical tips for the kitchen.",
+    "siteUrl":"https://www.meetup.com/Food-Freedom/events/234702791/"
+  }, {"image": "../assets/image/sierra.png",
+    "title": "Urbanism in the Age of Climate Change",
+    "date": "Thursday, February 23, 2017",
+    "time": "6:00 PM to 8:00 PM",
+    "location": "Triumph Coffee",
+    "detailedLocation": "201 Se 12th Ave, Portland, OR",
+    "description": "This provocative and engaging work emerges from Calthorpe’s belief that, just as the last fifty years produced massive changes in our culture, economy and environment, the next fifty will generate changes of an even more profound nature. The book, enhanced by its superb four-color graphics, is a call to action and a road map for moving forward.",
+    "siteUrl":"https://www.meetup.com/Portland-Vancouver-Sierra-Club-Outings-Events/events/237280197/"
+  }],
+  "volunteer": [{
+    "image": "../assets/image/freegeek.jpeg",
+    "title": "Volunteering with Free Geek",
+    "date": "Friday, February 3, 2017",
+    "time": "3:30 PM to 5:00 PM",
+    "location": "Free Geek",
+    "detailedLocation": "1731 SE 10th Avenue , Portland, OR",
+    "description": "Free Geek and PDXWIT are partnering up for our first group volunteer activity. Dani Schulte will be teaching volunteers how to manually disassemble computers, peripheral electronic devices, and other electronic hardware. Manual disassembly is important for 2 main reasons: 1. Significantly reduces landfill-bound waste from electronics in comparison to mechanized recycling done by for-profit recycling operations. 2. Produces high-quality separated metals. Agenda: Dani will do a brief orientation with you when you arrive at 3:30pm. Must read, fill out, and sign the Volunteer Application  (unless you have volunteered here before). The Group Volunteer Form  must also be filled out. All the required forms will be emailed to the volunteers closer to the event. Please bring the applications and the Group Form when you come to volunteer! ",
+    "siteUrl":"https://www.meetup.com/ChickTech-Portland/events/234869932/"
+    }, {"image": "../assets/image/adelante.jpg",
+    "title": "Jump into Fundraising!",
+    "date": "Ongoing (apply today)",
+    "time": "Time Negotiable",
+    "location": "Adelante Mujeres",
+    "detailedLocation": "Forest Grove, OR 97116",
+    "description": "Adelante Mujeres is seeking a part time volunteer to serve as support for Adelante Mujeres' annual fundraiser, Fiesta of Hope. By assisting Adelante's development team with sending request letters, making personal follow-up calls, creating auction baskets, and reaching out to new businesses, you will further Adelante's mission to provide education and empowerment opportunities to low-income Latina women and their families. There will be a few meetings at Adelante Mujeres' offices in Forest Grove to organize and check in, but much of this work will be done on your own time keeping in communication with development staff by email or phone.",
+    "siteUrl":"http://www.adelantemujeres.org/"
+    }, {"image": "../assets/image/rotaract.jpg",
+    "title": "Willamette Rotaract",
+    "date": "Jun 28, 2016",
+    "time": "6:00 PM to 8:00 PM",
+    "location": "Oswego Heritage House",
+    "detailedLocation": "398 10th St, Lake Oswego, OR 97034",
+    "description": "It's time to celebrate another successful year! Join the luau and help welcome the 2016/2017 Willamette Rotaract board and thank the 2015/2016 board for all their hard work. The luau begins with a delicious meal featuring kalua pig, shoyu chicken, teriyaki salmon, rice, macaroni salad, and mixed greens with cake for dessert! We will provide beer and Hawaiian punch (both spiked and alcohol free). ", "siteUrl":"https://www.meetup.com/Willamette-Rotaract/events/232081191/"
+    }]
+
+}
