@@ -1,6 +1,8 @@
 //fonts
 $header-font: 'Fjalla One', sans-serif;
 $body-font: 'Lato', sans-serif;
+$blue: #1ef3f1;
+$red: #FF0009;
 
 h1, h3 {
   text-align: center;
@@ -8,13 +10,15 @@ h1, h3 {
 }
 
 h3 {
-  background-color: #1ef3f1;
+  background-color: $blue;
   padding: 10px;
 }
 
 .container {
   display: flex;
   justify-content: center;
+  font-size: 1.1em;
+
 
   .card {
     width: 90vw;
@@ -24,8 +28,16 @@ h3 {
     position: relative;
     padding: 5em 2em 2em 2em;
 
+    #aboutTheIssue {
+      margin-top: .5em;
+    }
+
+    #whoToContact {
+      margin-top: 1.5em;
+    }
+
     a {
-      color: #FF0009;
+      color: $red;
     }
 
     .flex-container {
@@ -36,8 +48,6 @@ h3 {
      -webkit-align-items: center;
      align-items: center;
      flex-wrap: wrap;
-     min-width: 320px;
-     max-width: 1220px;
      margin-left: auto;
      margin-right: auto;
 
@@ -46,12 +56,20 @@ h3 {
         align-items: center;
         height: 20em;
         width: 100%;
-        border: 1px solid #626262;
+        border: 1px solid black;
         margin: 3px;
         padding: 20px;
 
           .infoList {
-            margin-left: 1em;
+            margin-left: 2em;
+            li {
+              margin-bottom: 1em;
+
+              .label {
+                font-family: $header-font;
+                font-weight: bold;
+              }
+            }
           }
 
           img {
@@ -69,12 +87,12 @@ h3 {
       position: absolute;
       width: 60vw;
       height: 6em;
-      border: 1px solid #1ef3f1;
+      border: 1px solid $blue;
       top: -30px;
       left: 50%;
       margin-left: -30vw;
       background-color: white;
-      border-top: 8px solid #1ef3f1;
+      border-top: 8px solid $blue;
       p {
         margin: 0;
         font-family: $body-font;
@@ -85,5 +103,30 @@ h3 {
         font-size: 25px;
       }
     }
+
+    .whatTo {
+      margin-top: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .btn {
+        background-color: darken($blue, 10%);
+        color: white;
+        padding: .75em;
+        margin-left: 1em;
+        display: flex;
+        align-items: center;
+      }
+
+      h5:last-of-type {
+        margin-left: 3em;
+      }
+
+      h5, a {
+      display: inline;
+      }
+    }
+
   }
 }
