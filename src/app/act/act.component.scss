@@ -62,7 +62,7 @@ h3 {
 
     @media screen and (max-width: $break-sm) {
       margin-top: 45px;
-      height: 65em;
+      height: 75em;
       padding-top: 5.5em;
     }
 
@@ -90,6 +90,13 @@ h3 {
      margin-left: auto;
      margin-right: auto;
 
+     @media screen and (max-width: $break-sm) {
+       // display:none;
+     justify-content: flex-start;
+     flex-wrap: wrap;
+
+     }
+
         .flex-item {
         display:flex;
         align-items: center;
@@ -99,17 +106,31 @@ h3 {
         border: 1px solid black;
         margin: 3px;
         padding: 20px;
+        width: 100%;
+
+        @media screen and (max-width: $break-sm) {
+          // display:none;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        height: 32em;
+
+        }
 
           .infoList {
             margin-left: 2em;
 
             @media screen and (max-width: $break-sm) {
-              display:none;
+            justify-content: flex-start;
+            flex-wrap: wrap;
             }
 
             li {
               margin-bottom: 1em;
 
+              @media screen and (max-width: $break-sm) {
+                margin-bottom: .4em;
+
+              }
               .label {
                 font-family: $header-font;
                 font-weight: bold;
