@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meetup } from '../meetup.model';
+import { Issue } from '../issue.model';
 import { Router } from '@angular/router';
 import { MeetupService } from '../meetup.service';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
