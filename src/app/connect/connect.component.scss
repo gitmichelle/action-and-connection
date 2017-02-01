@@ -5,6 +5,7 @@ $red : #FF0009;
 $blue: #1ef3f1;
 
 .header {
+  width: 100%;
  margin-top: 5%;
   h1, h3, h5 {
     text-align: center;
@@ -19,7 +20,7 @@ $blue: #1ef3f1;
 
 .container {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   flex-wrap: wrap;
 
   .card {
@@ -28,13 +29,15 @@ $blue: #1ef3f1;
     border: 1px solid black;
     margin: 45px;
     position: relative;
-    // padding: 5em 2em 2em 2em;
+
 
     a {
       color: black;
     }
     p{
       font-size: 80%;
+      font-family: $body-font;
+      margin: 2.5% 5% 0 5%;
     }
     .flex-container {
      display: -webkit-flex;
@@ -55,22 +58,29 @@ $blue: #1ef3f1;
         height: 10em;
         width: 85%;
         border: 1px solid #626262;
-        margin-left: 5%;
+        margin: 10%;
         padding: 20px;
 
-          .infoList {
-            // margin-left: 1em;
-            .redText{
-              color: $red;
-            }
-          }
-
+        .image {
           img {
             flex-grow: 0;
             flex-shrink: 2;
-            width: 100px;
+            width: 75px;
             height: 75px;
             border-radius: 50%;
+          }
+        }
+          .infoList {
+            width: 85%;
+            margin-left: 10%;
+            height: 50%;
+            margin-top: -5%;
+              li {
+               font-size: 80%;
+             }
+            .redText{
+              color: $red;
+            }
           }
         }
       }
@@ -78,20 +88,16 @@ $blue: #1ef3f1;
 
     .banner {
       text-align: center;
-      padding: 8px 20px;
-      // position: absolute;
       width: 400px;
       height: 6em;
       border: 1px solid #1ef3f1;
       margin-top: -10px;
-      // left: 50%;
       margin-left: -25px;
       background-color: white;
       border-top: 8px solid #1ef3f1;
       p {
         margin: 0;
         font-family: $body-font;
-        // font-size: .5em;
       }
       .title {
         font-family: $header-font;
