@@ -4,9 +4,9 @@
   <h5>Connect with places in your community about current events/issues</h5>
 </div>
 
-<div class="container">
+<div class="card-holder">
   <div *ngFor="let meetup of meetups | async" class="volunteerDiv">
-    <div class="row">
+    <!-- <div class="row"> -->
       <div class="card col-lg-4">
         <div class="banner">
           <a href={{meetup.siteUrl}}><p class="title">{{meetup.title}}<p></a>
@@ -15,7 +15,7 @@
         <div class="flex-container">
           <div class="flex-item">
             <div class="image">
-              <img src={{meetup.image}}>  
+              <img src={{meetup.image}}>
             </div>
             <div>
               <ul class="infoList">
@@ -28,7 +28,6 @@
         </div>
       </div>
     </div>
-
-    </div>
-
 </div>
+
+<!-- </div> -->
