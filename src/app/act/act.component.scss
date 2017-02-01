@@ -1,23 +1,48 @@
 //fonts
 $header-font: 'Fjalla One', sans-serif;
 $body-font: 'Lato', sans-serif;
+
+//colors
 $blue: #1ef3f1;
 $red: #FF0009;
+
+//media queries
+$break-sm: 480px; //max
+$break-md: 768px; //max
+$break-lg: 1098px; //max
+$break-xl: 1099px; //min
+
 
 h1, h3 {
   text-align: center;
   font-family: $header-font;
 }
 
+h1 {
+  margin-top: 5%;
+  @media screen and (max-width: $break-lg) {
+    margin-top: 3%;
+  }
+  @media screen and (max-width: $break-sm) {
+    margin-bottom: 3%;
+  }
+}
+
 h3 {
   background-color: $blue;
   padding: 10px;
+
+  @media screen and (max-width: $break-sm) {
+    margin-top: 0;
+  }
 }
 
 .container {
   display: flex;
   justify-content: center;
   font-size: 1.1em;
+
+
 
 
   .card {
@@ -27,6 +52,15 @@ h3 {
     margin-top: 100px;
     position: relative;
     padding: 5em 2em 2em 2em;
+
+    @media screen and (max-width: $break-lg) {
+      margin-top: 65px;
+    }
+
+    @media screen and (max-width: $break-sm) {
+      margin-top: 45px;
+      height: 60em;
+    }
 
     #aboutTheIssue {
       margin-top: .5em;
@@ -47,6 +81,7 @@ h3 {
      flex-direction: row;
      -webkit-align-items: center;
      align-items: center;
+     justify-content: center;
      flex-wrap: wrap;
      margin-left: auto;
      margin-right: auto;
@@ -54,6 +89,7 @@ h3 {
         .flex-item {
         display:flex;
         align-items: center;
+        justify-content: center;
         height: 20em;
         width: 100%;
         border: 1px solid black;
@@ -62,6 +98,11 @@ h3 {
 
           .infoList {
             margin-left: 2em;
+
+            @media screen and (max-width: $break-sm) {
+              display:none;
+            }
+
             li {
               margin-bottom: 1em;
 
@@ -101,6 +142,9 @@ h3 {
         font-family: $header-font;
         letter-spacing: 1px;
         font-size: 25px;
+        @media screen and (max-width: $break-sm) {
+          font-size: 23px;
+        }
       }
     }
 
@@ -110,6 +154,10 @@ h3 {
       justify-content: center;
       align-items: center;
 
+      @media screen and (max-width: $break-sm) {
+        margin-top: 1.5em;
+      }
+
       .btn {
         background-color: darken($blue, 10%);
         color: white;
@@ -117,14 +165,41 @@ h3 {
         margin-left: 1em;
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: $break-sm) {
+          font-size: 15px;
+          padding: 2em;
+          margin-left: .5em;
+          align-items: center;
+        }
+
+        @media screen and (max-width: $break-lg) {
+          margin-left: 5px;
+
+        }
+      }
+
+      h5 {
+        @media screen and (max-width: $break-sm) {
+          font-size: 18px;
+        }
       }
 
       h5:last-of-type {
         margin-left: 3em;
+        @media screen and (max-width: $break-lg) {
+          margin-left: 1.5em;
+        }
+
+        @media screen and (max-width: $break-sm) {
+          margin-left: 1em;
+        }
       }
 
       h5, a {
       display: inline;
+
+
       }
     }
 
