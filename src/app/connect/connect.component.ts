@@ -1,5 +1,4 @@
 import { Component, OnInit} from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 import { ActComponent } from '../act/act.component';
 import { VolunteerComponent } from '../volunteer/volunteer.component';
@@ -7,6 +6,7 @@ import { AboutComponent } from '../about/about.component';
 import { Meetup } from '../meetup.model';
 import { MeetupService } from '../meetup.service';
 import { Router } from '@angular/router';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-connect',
@@ -15,9 +15,9 @@ import { Router } from '@angular/router';
   providers: [MeetupService]
 })
 export class ConnectComponent implements OnInit {
-  meetups: Meetup[]
+  meetups: FirebaseListObservable<any[]>;
 
-  constructor(private route: ActivatedRoute, private router: Router, private meetupService: MeetupService){}
+  constructor(private router: Router, private meetupService: MeetupService){}
 
   ngOnInit(){
     this.meetups = this.meetupService.getMeetups();

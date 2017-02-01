@@ -1,4 +1,4 @@
-<div *ngFor="let meetup of meetups" class="volunteerDiv">
+<div *ngFor="let meetup of meetups | async" class="volunteerDiv">
   <img src={{meetup.image}} class="resizeImg" /><br>
   <h3>{{meetup.title}}</h3>
   <h4>{{meetup.siteUrl}}</h4>
