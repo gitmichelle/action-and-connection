@@ -1,0 +1,17 @@
+.resizeImg {
+    height: 350px;
+}
+
+.volunteerDiv {
+  margin: 12px;
+  border-style: solid;
+  border-width: 2px;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
