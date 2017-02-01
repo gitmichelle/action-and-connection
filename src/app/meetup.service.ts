@@ -12,6 +12,7 @@ export class MeetupService {
   constructor(private angularFire: AngularFire) {
     this.volunteerEvents = angularFire.database.list('volunteer');
     this.connectEvents = angularFire.database.list('connect');
+    this.issues = angularFire.database.list('issue');
   };
 
   getVolunteer() {
