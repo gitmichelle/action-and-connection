@@ -1,33 +1,41 @@
 //fonts
 $header-font: 'Fjalla One', sans-serif;
 $body-font: 'Lato', sans-serif;
+$red : #FF0009;
+$blue: #1ef3f1;
 
-h1, h3 {
-  text-align: center;
-  font-family: $header-font;
-}
+.header {
+ margin-top: 5%;
+  h1, h3, h5 {
+    text-align: center;
+    font-family: $header-font;
+  }
 
-h3 {
-  background-color: #1ef3f1;
-  padding: 10px;
+  h3 {
+    background-color: #1ef3f1;
+    padding: 10px;
+  }
 }
 
 .container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
   .card {
-    width: 90vw;
-    height: 50em;
+    width: 350px;
+    height: 25em;
     border: 1px solid black;
-    margin-top: 100px;
+    margin: 45px;
     position: relative;
-    padding: 5em 2em 2em 2em;
+    // padding: 5em 2em 2em 2em;
 
     a {
-      color: #FF0009;
+      color: black;
     }
-
+    p{
+      font-size: 80%;
+    }
     .flex-container {
      display: -webkit-flex;
      display: flex;
@@ -43,22 +51,25 @@ h3 {
 
         .flex-item {
         display:flex;
-        align-items: center;
-        height: 20em;
-        width: 100%;
+        align-content: center;
+        height: 10em;
+        width: 85%;
         border: 1px solid #626262;
-        margin: 3px;
+        margin-left: 5%;
         padding: 20px;
 
           .infoList {
-            margin-left: 1em;
+            // margin-left: 1em;
+            .redText{
+              color: $red;
+            }
           }
 
           img {
             flex-grow: 0;
             flex-shrink: 2;
-            width: 250px;
-            height: 250px;
+            width: 100px;
+            height: 75px;
             border-radius: 50%;
           }
         }
@@ -68,23 +79,27 @@ h3 {
     .banner {
       text-align: center;
       padding: 8px 20px;
-      position: absolute;
-      width: 60vw;
+      // position: absolute;
+      width: 400px;
       height: 6em;
       border: 1px solid #1ef3f1;
-      top: -30px;
-      left: 50%;
-      margin-left: -30vw;
+      margin-top: -10px;
+      // left: 50%;
+      margin-left: -25px;
       background-color: white;
       border-top: 8px solid #1ef3f1;
       p {
         margin: 0;
         font-family: $body-font;
+        // font-size: .5em;
       }
-      .issue {
+      .title {
         font-family: $header-font;
         letter-spacing: 1px;
-        font-size: 25px;
+        font-size: 115%;
+        &:hover {
+          color: $red;
+        }
       }
     }
   }
