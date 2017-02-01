@@ -4,14 +4,20 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
 export class MeetupService {
-  meetups: FirebaseListObservable<any[]>;
+  volunteerEvents: FirebaseListObservable<any[]>;
+  connectEvents: FirebaseListObservable<any[]>;
 
   constructor(private angularFire: AngularFire) {
-    this.meetups = angularFire.database.list('meetups');
+    this.volunteerEvents = angularFire.database.list('volunteer');
+    this.connectEvents = angularFire.database.list('connect');
   };
 
-  getMeetups() {
-    return this.meetups;
+  getVolunteer() {
+    return this.volunteerEvents;
+  }
+
+  getConnect() {
+    return this.connectEvents;
   }
 
 }

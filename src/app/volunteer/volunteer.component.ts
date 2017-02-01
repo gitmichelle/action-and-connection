@@ -20,7 +20,7 @@ export class VolunteerComponent implements OnInit {
   constructor(private router: Router, private meetupService: MeetupService){}
 
   ngOnInit(){
-    this.meetups = this.meetupService.getMeetups();
+    this.meetups = this.meetupService.getVolunteer();
   }
 
 }
