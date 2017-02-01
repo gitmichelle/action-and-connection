@@ -1,4 +1,4 @@
-<div *ngFor="let meetup of meetups | async" class="volunteerDiv">
+<!-- <div *ngFor="let meetup of meetups | async" class="volunteerDiv">
   <img src={{meetup.image}} class="resizeImg" /><br>
   <h3>{{meetup.title}}</h3>
   <h4>{{meetup.siteUrl}}</h4>
@@ -11,4 +11,32 @@
   <h4>{{meetup.description}}</h4>
   <br>
   <br>
+</div> -->
+
+<h1>Connect</h1>
+<h3>OREGON</h3>
+<h5>Connect with places in your community about current events/issues</h5>
+
+<div class="container">
+  <div *ngFor="let meetup of meetups | async" class="volunteerDiv">
+    <div class="card">
+      <div class="banner">
+        <a href={{meetup.siteUrl}}></a><p class="issue">{{meetup.title}}<p>
+      </div>
+      <p>{{meetup.description}}</p>
+      <div class="flex-container">
+        <div class="flex-item">
+          <img src={{meetup.image}}>
+          <div>
+            <ul class="infoList">
+              <li>Date:{{meetup.date}} </li>
+              <li>Time:{{meetup.time}}</li>
+              <li>Location:{{meetup.detailedLocation}} </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
