@@ -9,8 +9,9 @@ import { ActComponent } from './act/act.component';
 import { VolunteerComponent } from './volunteer/volunteer.component';
 import { ConnectComponent } from './connect/connect.component';
 import { AboutComponent } from './about/about.component';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { masterFirebaseConfig } from './api-keys';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -19,6 +20,12 @@ export const firebaseConfig = {
   storageBucket: masterFirebaseConfig.storageBucket
 };
 
+const myFirebaseAuthConfig = {
+  provider: AuthProviders.Google,
+  method: AuthMethods.Redirect
+};
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,14 +33,15 @@ export const firebaseConfig = {
     ActComponent,
     VolunteerComponent,
     ConnectComponent,
-    AboutComponent
+    AboutComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

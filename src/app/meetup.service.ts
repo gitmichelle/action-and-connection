@@ -20,4 +20,12 @@ export class MeetupService {
     return this.connectEvents;
   }
 
+  addConnect(newMeetup: Meetup) {
+    this.connectEvents.push(newMeetup);
+  }
+
+  addVolunteer(newMeetup: Meetup) {
+    this.volunteerEvents.push(newMeetup);
+  }
+
 }
