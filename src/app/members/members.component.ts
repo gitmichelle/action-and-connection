@@ -20,6 +20,7 @@ export class MembersComponent implements OnInit {
     state: string = '';
     volunteerFormShow = false;
     connectFormShow = false;
+    actFormShow = false;
     showButton = true;
     constructor(public af: AngularFire, private router: Router, private meetupService: MeetupService) {
 
@@ -34,14 +35,20 @@ export class MembersComponent implements OnInit {
     this.volunteerFormShow = true;
     this.showButton = false;
     }
-    cancelForm() {
-      this.volunteerFormShow = false;
-      this.connectFormShow = false;
-      this.showButton = true;
-    }
+
     addConnect() {
     this.connectFormShow = true;
     this.showButton = false;
+    }
+    addIssue() {
+    this.actFormShow = true;
+    this.showButton = false;
+    }
+    cancelForm() {
+      this.volunteerFormShow = false;
+      this.connectFormShow = false;
+      this.actFormShow = false;
+      this.showButton = true;
     }
 
     logout() {
@@ -54,12 +61,24 @@ export class MembersComponent implements OnInit {
       var newMeetup: Meetup = new Meetup(image, title, date, time, location, detailedLocation, description, siteUrl);
       console.log(newMeetup);
        this.meetupService.addConnect(newMeetup);
+       this.connectFormShow = false;
+       this.showButton = true;
     }
 
     submitVolunteerEvent(image: string, title: string, date: string, time: string, location: string, detailedLocation: string, description: string, siteUrl: string) {
       var newMeetup: Meetup = new Meetup(image, title, date, time, location, detailedLocation, description, siteUrl);
       console.log(newMeetup);
        this.meetupService.addVolunteer(newMeetup);
+       this.volunteerFormShow = false;
+       this.showButton = true;
+    }
+
+    submitActEvent(image: string, issue: string, description: string, hyperlink: string, name: string, title: string, state: string, phone: string, email: string, address: string) {
+      var newMeetup: Issue = new Issue(image, issue, description, hyperlink, name, title, state, phone, email, address);
+      console.log(newMeetup);
+       this.meetupService.addIssue(newMeetup);
+       this.actFormShow = false;
+       this.showButton = true;
     }
 
     ngOnInit() {
