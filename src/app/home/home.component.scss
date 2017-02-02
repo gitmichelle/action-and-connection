@@ -229,18 +229,15 @@ $break-xl: 1440px; //min
 .main {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
-  position: relative;
-=======
 
->>>>>>> ui
+  position: relative;
+
   @media screen and (max-width: $break-sm) {
     display: none;
   }
   @media #{$break-Pro} {
       margin-left: 150px;
    }
-<<<<<<< HEAD
    &:before {
     content: "";
     position: absolute;
@@ -256,7 +253,6 @@ $break-xl: 1440px; //min
     opacity: .5;
    }
 
-=======
    @media screen and (min-width: $break-lg) {
      margin-left: 200px;
     //  background-color: pink;
@@ -264,7 +260,6 @@ $break-xl: 1440px; //min
   @media screen and (min-width: $break-xl) {
     margin-left: 300px;
   }
->>>>>>> ui
 
   .top {
     margin-left: 35%;
@@ -499,15 +494,13 @@ $break-xl: 1440px; //min
     height: 30vh;
     background-color: white;
     margin-top: 10%;
-<<<<<<< HEAD
     margin-bottom: 20%;
     @media screen and (max-width: $break-lg) {
       margin-left: 10%;
       margin-top: 15%;
-=======
+    }
     @media #{$break-Pro} {
         margin-top: 0;
->>>>>>> ui
      }
      @media screen and (min-width: $break-md) {
       margin-top: 5%;
@@ -517,7 +510,7 @@ $break-xl: 1440px; //min
        margin-top: 8%;
        margin-left: 7%;
        }
-  }
+
   .box {
     height: 300px;
     width: 600px;
@@ -576,5 +569,5 @@ $break-xl: 1440px; //min
       }
     }
   }
-
+  }
 }

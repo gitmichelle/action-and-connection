@@ -10,9 +10,7 @@ import { VolunteerComponent } from './volunteer/volunteer.component';
 import { ConnectComponent } from './connect/connect.component';
 import { AboutComponent } from './about/about.component';
 import { masterFirebaseConfig } from './api-keys';
-// import { AuthComponent } from './auth/auth.component';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthModule }  from './auth/auth.module';
 import { AppRoutingModule }        from './app-routing.module';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { AuthGuard } from './auth.service';
@@ -59,7 +57,6 @@ const myFirebaseAuthConfig = {
     SignupComponent,
     EmailComponent,
     MembersComponent,
-    // AuthComponent,
 
 
     AdminComponent
@@ -70,7 +67,6 @@ const myFirebaseAuthConfig = {
     HttpModule,
     routing,
 
-    AuthModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
     AppRoutingModule,
