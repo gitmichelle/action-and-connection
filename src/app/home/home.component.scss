@@ -11,8 +11,8 @@ $black: #2b2b2b;
 $connect-blue: #0353A4;
 //media quaries
 $break-sm: 480px; //max
-$break-md: 768px; //max
-// $break-Xmd: 1280px; //max
+$break-md: 768px; //min
+$break-Pro: 1024px; //max
 $break-lg: 1280px; //max
 $break-xl: 1440px; //min
 
@@ -222,6 +222,9 @@ $break-xl: 1440px; //min
     @media screen and (min-width: $break-md) {
      font-size: 100%;
      }
+       @media screen and (max-width: $break-Pro) {
+         font-size: 110%;
+       }
   }
 }
 
@@ -231,6 +234,10 @@ $break-xl: 1440px; //min
   @media screen and (max-width: $break-sm) {
     display: none;
   }
+  @media screen and (min-width: $break-Pro) {
+    margin-left: 12%;
+   //  background-color: pink;
+ }
   .top {
     margin-left: 35%;
     height: 27vh;
@@ -239,6 +246,10 @@ $break-xl: 1440px; //min
     @media screen and (max-width: $break-lg) {
       margin-left: 5%;
      }
+     @media screen and (max-width: $break-Pro) {
+       margin: 0;
+      //  background-color: pink;
+    }
      @media screen and (min-width: $break-md) {
        margin-left: 7%;
        margin-top: 15%;
@@ -246,6 +257,7 @@ $break-xl: 1440px; //min
     .box {
       height: 300px;
       width: 600px;
+
       @media screen and (min-width: $break-md) {
         height: 250px;
         width: 450px;
@@ -276,16 +288,18 @@ $break-xl: 1440px; //min
         @media screen and (min-width: $break-md) {
           display: none;
         }
-
       }
-
-
       #phone {
         position: absolute;
-
         right: -290px;
         top: -99px;
         transform: rotate(-20deg);
+        @media screen and (max-width: $break-Pro) {
+          left: 555px;
+          top: -60px;
+          width: 200px;
+          transform: rotate(-25deg);
+         }
         @media screen and (min-width: $break-md) {
           left: 355px;
           top: -60px;
@@ -294,6 +308,11 @@ $break-xl: 1440px; //min
          }
         img {
           height: 400px;
+          @media screen and (max-width: $break-Pro) {
+            height: 320px;
+            position: relative;
+            z-index: 1;
+           }
           @media screen and (min-width: $break-md) {
             height: 300px;
             position: relative;
@@ -319,6 +338,10 @@ $break-xl: 1440px; //min
             top: 100px;
             left: 100px;
            }
+           @media screen and (min-width: $break-Pro) {
+             top: 75px;
+             left: 93px;
+          }
         }
 
         .calling span {
