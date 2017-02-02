@@ -25,6 +25,7 @@ $break-xl: 1440px; //min
 
 //styling
 
+
 .circle-links {
   height: 500px;
   @media screen and (max-width: $break-lg) {
@@ -39,15 +40,15 @@ $break-xl: 1440px; //min
   .title-one{
     text-align: center;
     width: 100%;
-    margin-top: 5%;
+    margin-top: 3%;
     font-family: $body-font;
     @media screen and (min-width: $break-md) {
       margin-top: 7%;
      }
-    h2{
+    h3{
       color: $black;
       letter-spacing: 4px;
-      font-size: 4.7em;
+      font-size: 5em;
     }
   }
   .circles {
@@ -198,6 +199,7 @@ $break-xl: 1440px; //min
 .call {
   height: 500px;
   padding: 5%;
+  margin-top: 10px;
   background-color: #8792A3;
   color: white;
   @media screen and (max-width: $break-sm) {
@@ -230,29 +232,12 @@ $break-xl: 1440px; //min
   display: flex;
   flex-direction: column;
 
-  position: relative;
-
   @media screen and (max-width: $break-sm) {
     display: none;
   }
   @media #{$break-Pro} {
       margin-left: 150px;
    }
-   &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    // z-index: 1;
-    background-image: url('assets/image/checkmark.png');
-    background-repeat: repeat;
-    background-size: 30px;
-    background-color: lighten($blue, 40%);
-    opacity: .5;
-   }
-
    @media screen and (min-width: $break-lg) {
      margin-left: 200px;
     //  background-color: pink;
@@ -276,8 +261,6 @@ $break-xl: 1440px; //min
      }
    @media #{$break-Pro} {
        margin: 0;
-
-      //  background-color: pink;
     }
      @media screen and (min-width: $break-md) {
        margin-left: 7%;
@@ -494,11 +477,6 @@ $break-xl: 1440px; //min
     height: 30vh;
     background-color: white;
     margin-top: 10%;
-    margin-bottom: 20%;
-    @media screen and (max-width: $break-lg) {
-      margin-left: 10%;
-      margin-top: 15%;
-    }
     @media #{$break-Pro} {
         margin-top: 0;
      }
@@ -510,7 +488,7 @@ $break-xl: 1440px; //min
        margin-top: 8%;
        margin-left: 7%;
        }
-
+  }
   .box {
     height: 300px;
     width: 600px;
@@ -568,6 +546,5 @@ $break-xl: 1440px; //min
          }
       }
     }
-  }
   }
 }
