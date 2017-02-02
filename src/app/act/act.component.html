@@ -33,11 +33,9 @@
       </div>
 
       <div class="whatTo">
-        <div class="buttons">
-          <h5>Helpful tips on what to say/write:</h5>
-          <a class="waves-effect waves-light btn">Click Here</a>
-        </div>
-        <div class="callScript">
+        <h5>Helpful tips on what to say/write:</h5>
+        <button type="button" (click)="showScript()" class="waves-effect waves-light btn" *ngIf="buttonIsShowing">Show Script</button>
+        <div class="callScript" *ngIf="scriptIsShowing">
           <p>
             A) ASK FOR THE RIGHT PERSON FOR YOUR ISSUE:
             When calling the DC office, ask for the Staff member in charge of whatever you're calling about ("Hi, I'd like to speak with the staffer in charge of {{issue.issue}}, please").
@@ -64,6 +62,7 @@
             They may get to know your voice/get sick of you - it doesn't matter. The people answering the phones generally turn over every 6 weeks anyway, so even if they're really sick of you, they'll be gone in 6 weeks.
             From experience since the election: If you hate being on the phone and feel awkward (which is a lot of people) don't worry about it - THERE ARE A BUNCH OF SCRIPTS (Indivisible has some, there are lots of others floating around these days). After a few days of calling, it starts to feel a lot more natural.
           </p>
+          <button type="button" (click)="hideButton()" class="waves-effect waves-light btn">Hide Script</button>
         </div>
       </div>
     </div>

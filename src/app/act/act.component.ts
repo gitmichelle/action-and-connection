@@ -16,11 +16,23 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class ActComponent implements OnInit {
   issues: FirebaseListObservable<any[]>;
+  scriptIsShowing = false;
+  buttonIsShowing = true;
 
   constructor(private router: Router, private meetupService: MeetupService){}
 
   ngOnInit() {
     this.issues = this.meetupService.getIssue();
+  }
+
+  showScript() {
+    this.scriptIsShowing = true;
+        this.buttonIsShowing = false;
+  }
+
+  hideButton() {
+    this.scriptIsShowing = false;
+    this.buttonIsShowing = true;
   }
 
 }
