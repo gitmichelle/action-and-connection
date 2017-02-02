@@ -6,11 +6,9 @@
     "time": "6:00 PM to 8:00 PM",
     "location": "Studio Nia",
     "detailedLocation": "918 SW Yamhill Street, 4th Floor, Portland, OR ",
-<<<<<<< HEAD
-    "description": "Joseph Wachunas will resume meetings of the First Thursday Book Club (FTBC) in February. This particular meetup is best suited for adults with an Intermediate to advanced level knowledge of the Italian language.", "siteUrl":"https://www.meetup.com/Italian-Language-Culture-Connect-OR/events/236608239/"
-=======
+    "description": "Joseph Wachunas will resume meetings of the First Thursday Book Club (FTBC) in February. This particular meetup is best suited for adults with an Intermediate to advanced level knowledge of the Italian language.", "siteUrl":"https://www.meetup.com/Italian-Language-Culture-Connect-OR/events/236608239/",
     "description": "Joseph Wachunas will resume meetings of the First Thursday Book Club (FTBC) in February.", "siteUrl":"https://www.meetup.com/Italian-Language-Culture-Connect-OR/events/236608239/"
->>>>>>> db0f6c0e20ac75b1ca4977c4a8a0301bc7805379
+
   }, {"image": "../assets/image/foodmedicine.jpg",
     "title": "PUBLIC EVENT: Food as Medicine Fourth Annual Symposium",
     "date": "Saturday, February 11, 2017",
