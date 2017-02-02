@@ -4,14 +4,17 @@
     /*margin-left:-35%;*/
 }
 
-header {
-    background:#3B8598;
+/*header {
+    background:#1ef3f1;
     width:100%;
-}
+}*/
 
-.basic-btn {
+.button {
     width:100px;
-    margin:0;
+    margin:50px;
+    margin-right: 50px;
+    background-color: #1ef3f1;
+    padding: 1.2em;
 }
 
 #page {

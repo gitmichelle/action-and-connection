@@ -32,8 +32,8 @@ button {
 }
 
 .basic-btn {
-    background: #3B8598;
-    color:white;
+    background: #1ef3f1;
+    color:black;
 }
 
 input.txt {
@@ -83,6 +83,7 @@ h2 {
   top: 50%;
   margin-top: -20px;
   border-radius: 50%;
+  background-color: #c91435;
 }
 
 
@@ -91,9 +92,9 @@ h2 {
   position: absolute;
   width: 40px;
   height: 10px;
-  background: #E2E4E6;
-  top: 10px;
-  left: -5px;
+  background: #1ef3f1;
+  top: 5px;
+  left: -10px;
   animation: spin 1.2s infinite;
 }
 

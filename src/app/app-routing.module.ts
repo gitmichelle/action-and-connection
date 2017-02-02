@@ -7,8 +7,8 @@ const appRoutes: Routes = [
   // { path: '',   redirectTo: '/auth', pathMatch: 'full' },
 
   {
-  path: 'auth',
-  loadChildren: 'app/auth/auth.module#AuthModule',
+  // path: 'auth',
+  // loadChildren: 'app/member/member.module#MemberModule',
   canLoad: [AuthGuard]
   },
 ];
