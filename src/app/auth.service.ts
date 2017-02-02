@@ -1,24 +1,24 @@
-import { Injectable } from '@angular/core';
-
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
+import { CanActivate, Router } from '@angular/router';
+import { AngularFireAuth } from "angularfire2/angularfire2";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs/Rx";
 import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/delay';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/take';
 
 @Injectable()
-export class AuthService {
-  isLoggedIn: boolean = false;
+export class AuthGuard implements CanActivate {
 
-  // store the URL so we can redirect after logging in
-  redirectUrl: string;
+    constructor(private auth: AngularFireAuth, private router: Router) {}
 
-  login(): Observable<boolean> {
-    return Observable.of(true).delay(1000).do(val => this.isLoggedIn = true);
-  }
+    canActivate(): Observable<boolean> {
+      return Observable.from(this.auth)
+        .take(1)
+        .map(state => !!state)
+        .do(authenticated => {
+      if
+        (!authenticated) this.router.navigate([ '/login' ]);
+      })
+    }
 
-  logout(): void {
-    this.isLoggedIn = false;
-  }
 }
-
-// Although it doesn't actually log in, it has what you need for this discussion. It has an isLoggedIn flag to tell you whether the user is authenticated. Its login method simulates an API call to an external service by returning an observable that resolves successfully after a short pause. The redirectUrl property will store the attempted URL so you can navigate to it after authenticating.

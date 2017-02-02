@@ -9,14 +9,17 @@ import { ActComponent } from './act/act.component';
 import { VolunteerComponent } from './volunteer/volunteer.component';
 import { ConnectComponent } from './connect/connect.component';
 import { AboutComponent } from './about/about.component';
-import { AngularFireModule } from 'angularfire2';
 import { masterFirebaseConfig } from './api-keys';
 // import { AuthComponent } from './auth/auth.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthModule }  from './auth/auth.module';
-import { LoginRoutingModule }      from './login-routing.module';
-import { LoginComponent }          from './login.component';
 import { AppRoutingModule }        from './app-routing.module';
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+import { AuthGuard } from './auth.service';
+import { LoginComponent } from './login/login.component'
+import { SignupComponent } from './signup/signup.component'
+import { EmailComponent } from './email/email.component'
+import { MembersComponent } from './members/members.component'
 
 const appRoutes: Routes = [
   {
@@ -37,6 +40,11 @@ export const firebaseConfig = {
   storageBucket: masterFirebaseConfig.storageBucket
 };
 
+const myFirebaseAuthConfig = {
+  provider: AuthProviders.Google,
+  method: AuthMethods.Redirect
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,8 +53,13 @@ export const firebaseConfig = {
     VolunteerComponent,
     ConnectComponent,
     AboutComponent,
-    // AuthComponent,
     LoginComponent,
+    SignupComponent,
+    EmailComponent,
+    MembersComponent,
+    // AuthComponent,
+
+
 
   ],
   imports: [
@@ -56,12 +69,12 @@ export const firebaseConfig = {
     routing,
     AuthModule,
     RouterModule.forRoot(appRoutes),
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
     AppRoutingModule,
-    LoginRoutingModule,
+
 
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

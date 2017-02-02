@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { NgModule }             from '@angular/core';
-import { AuthGuard }   from '../auth-guard.service';
+import { AuthGuard}   from '../auth.service';
 import { AuthComponent } from './auth.component';
 import { AuthDashboardComponent } from './auth-dashboard.component';
 import { AppComponent } from '../app.component';

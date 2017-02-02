@@ -1,10 +1,10 @@
 import { NgModule }                from '@angular/core';
 import { RouterModule, Routes }    from '@angular/router';
-import { AuthGuard } from './auth-guard.service'
+import { AuthGuard } from './auth.service'
 
 
 const appRoutes: Routes = [
-  { path: '',   redirectTo: '/auth', pathMatch: 'full' },
+  // { path: '',   redirectTo: '/auth', pathMatch: 'full' },
 
   {
   path: 'auth',
