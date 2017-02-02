@@ -34,17 +34,16 @@ const appRoutes: Routes = [
     path: 'about',
     component: AboutComponent
   },
-<<<<<<< HEAD
+
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login-email', component: EmailComponent },
-  { path: 'members', component: MembersComponent, canActivate:  [AuthGuard] }
-=======
+  { path: 'members', component: MembersComponent, canActivate:  [AuthGuard] },
   {
     path: 'admin',
     component: AdminComponent
   }
->>>>>>> master
+
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
