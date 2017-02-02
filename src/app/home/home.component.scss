@@ -26,7 +26,12 @@ $break-xl: 1440px; //min
 
 
 .circle-links {
-  height: 45vh;
+  height: 500px;
+  @media screen and (max-width: $break-lg) {
+    // width: 175px;
+    height: 175px;
+    // align-self: center;
+   }
   @media screen and (max-width: $break-sm) {
     height: 850px;
    }
@@ -173,7 +178,7 @@ $break-xl: 1440px; //min
 }
 
 .call {
-  height: 45vh;
+  height: 500px;
   padding: 5%;
   background-color: #8792A3;
   color: white;
@@ -211,9 +216,17 @@ $break-xl: 1440px; //min
     @media screen and (max-width: $break-lg) {
       margin-left: 10%;
      }
+     @media screen and (max-width: $break-md) {
+       margin-left: 10%;
+       margin-top: 20%;
+      }
     .box {
       height: 300px;
       width: 600px;
+      @media screen and (max-width: $break-md) {
+        height: 250px;
+        width: 500px;
+       }
       h4 {
         font-family: $header-font;
         letter-spacing: 2px;
@@ -248,6 +261,9 @@ $break-xl: 1440px; //min
         transform: rotate(-20deg);
         img {
           height: 400px;
+          @media screen and (max-width: $break-md) {
+            height: 300px;
+           }
         }
 
         .calling {

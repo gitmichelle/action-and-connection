@@ -10,7 +10,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 @Component({
   selector: 'app-volunteer',
   templateUrl: './volunteer.component.html',
-  styleUrls: ['./volunteer.component.css'],
+  styleUrls: ['./volunteer.component.scss'],
   providers: [MeetupService]
 })
 export class VolunteerComponent implements OnInit {
