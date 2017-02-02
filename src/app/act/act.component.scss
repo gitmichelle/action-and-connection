@@ -44,7 +44,7 @@ h3 {
 
   .card {
     width: 90vw;
-    height: 50em;
+    min-height: 50em;
     border: 1px solid black;
     margin-top: 100px;
     position: relative;
@@ -68,6 +68,12 @@ h3 {
 
     #aboutTheIssue {
       margin-top: .5em;
+      @media screen and (max-width: $break-lg) {
+        margin-top: 1.6em;
+      }
+      @media screen and (max-width: $break-sm) {
+        margin-top: .5em;
+      }
     }
 
     #whoToContact {
@@ -114,6 +120,12 @@ h3 {
         height: 32em;
 
         }
+          .image {
+            width: 15.625em;
+            height: 15.625em;
+            border: 1px solid black;
+            border-radius: 50%;
+          }
 
           .infoList {
             margin-left: 2em;
@@ -180,91 +192,50 @@ h3 {
 
     .whatTo {
       margin-top: 2em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 100%;
 
-      @media screen and (max-width: $break-sm) {
-        margin-top: 1.5em;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-      }
+      .buttons {
 
-      @media screen and (max-width: $break-md) {
-        margin-top: 1.5em;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-      }
-
-      .btn {
-        background-color: darken($blue, 10%);
-        color: white;
-        padding: .75em;
-        margin-left: 1em;
-        display: flex;
-        align-items: center;
+        @media screen and (max-width: $break-sm) {
+          width: 100%;
+        }
+        @media screen and (max-width: $break-md) {
+          width: 100%;
+        }
 
         &:first-of-type {
+          margin-bottom: 20px;
+        }
+
+        .btn {
+          background-color: darken($blue, 10%);
+          color: white;
+          padding: .75em;
+          width: 40%;
+
           @media screen and (max-width: $break-sm) {
-            margin-bottom: 20px;
-            margin-right: 80px;
+            font-size: 12px;
           }
+
           @media screen and (max-width: $break-md) {
-            margin-bottom: 20px;
-            margin-right: 150px;
+            font-size: 15px;
+          }
+        }
+
+        h5 {
+          @media screen and (max-width: $break-sm) {
+            font-size: 18px;
           }
 
+          @media screen and (max-width: $break-md) {
+            font-size: 20px;
+          }
         }
 
-        @media screen and (max-width: $break-sm) {
-          font-size: 12px;
-          padding: 2em 1em;
-          // margin-left: .5em;
-          // margin-right: 2em;
+        h5, a {
+        display: inline;
         }
-
-        @media screen and (max-width: $break-md) {
-          font-size: 15px;
-          padding: 2em 1em;
-
-        }
-
-        @media screen and (max-width: $break-lg) {
-          margin-left: 5px;
-
-        }
-      }
-
-      h5 {
-        @media screen and (max-width: $break-sm) {
-          font-size: 18px;
-        }
-
-        @media screen and (max-width: $break-md) {
-          font-size: 20px;
-        }
-      }
-
-      h5:last-of-type {
-        margin-left: 3em;
-
-        @media screen and (max-width: $break-lg) {
-          margin-left: 1.5em;
-        }
-
-        @media screen and (max-width: $break-md) {
-          margin-left: .5em;
-        }
-
-        @media screen and (max-width: $break-sm) {
-          margin-left: 0;
-        }
-      }
-
-      h5, a {
-      display: inline;
       }
     }
-
   }
 }
