@@ -14,15 +14,15 @@ export class AppComponent {
     this.af.auth.subscribe(auth => console.log(auth));
   }
 
- login() {
-   this.af.auth.login({
-     email: 'frankanthonygavin@gmail.com',
-     password: 'passwerd',
-   });
- }
-
- logout() {
-    this.af.auth.logout();
-
- }
+ // login() {
+ //   this.af.auth.login({
+ //     email: 'frankanthonygavin@gmail.com',
+ //     password: 'passwerd',
+ //   });
+ // }
+ //
+ // logout() {
+ //    this.af.auth.logout();
+ //
+ // }
 }

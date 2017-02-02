@@ -4,13 +4,13 @@ import { AuthGuard } from './auth.service'
 
 
 const appRoutes: Routes = [
-  // { path: '',   redirectTo: '/auth', pathMatch: 'full' },
-
-  {
-  // path: 'auth',
+  // { path: '',   redirectTo: '/member', pathMatch: 'full' },
+  //
+  // {
+  // path: 'member',
   // loadChildren: 'app/member/member.module#MemberModule',
-  canLoad: [AuthGuard]
-  },
+  // canLoad: [AuthGuard]
+  // },
 ];
 
 @NgModule({

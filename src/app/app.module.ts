@@ -20,6 +20,9 @@ import { EmailComponent } from './email/email.component'
 import { MembersComponent } from './members/members.component'
 
 const appRoutes: Routes = [
+  // {
+  //   path: 'home', component: HomeComponent
+  // },
   {
     path: 'act', component: ActComponent
   },
