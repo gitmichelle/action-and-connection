@@ -3,8 +3,8 @@ $header-font: 'Fjalla One', sans-serif;
 $body-font: 'Lato', sans-serif;
 
 //colors
-$red: #c91435;
-$blue: #103556;
+$red : #FF0009;
+$blue: #1ef3f1;
 $white: #f6f7eb;
 $yellow: #ffd449;
 $black: #2b2b2b;
@@ -36,15 +36,23 @@ nav {
     width: 5.25%;
     height: auto;
     margin-right: .75%;
+    &:hover {
+      transform: scale(1.1,1.1);
+    }
   }
   a {
     color: $blue !important;
     &:hover {
       color: $red !important;
+      #plus {
+
+          color: darken($blue, 10%)
+
+      }
     }
   }
   .brand-logo{
-    color: $blue !important;
+    color: darken($blue, 10%) !important;
     letter-spacing: .5px;
   }
   ul{

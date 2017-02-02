@@ -9,6 +9,7 @@ import { ActComponent } from './act/act.component';
 import { VolunteerComponent } from './volunteer/volunteer.component';
 import { ConnectComponent } from './connect/connect.component';
 import { AboutComponent } from './about/about.component';
+<<<<<<< HEAD
 import { masterFirebaseConfig } from './api-keys';
 // import { AuthComponent } from './auth/auth.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -32,6 +33,11 @@ const appRoutes: Routes = [
     path: 'connect', component: ConnectComponent
   },
 ]
+=======
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+import { masterFirebaseConfig } from './api-keys';
+import { AdminComponent } from './admin/admin.component';
+>>>>>>> master
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -45,6 +51,10 @@ const myFirebaseAuthConfig = {
   method: AuthMethods.Redirect
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +63,7 @@ const myFirebaseAuthConfig = {
     VolunteerComponent,
     ConnectComponent,
     AboutComponent,
+<<<<<<< HEAD
     LoginComponent,
     SignupComponent,
     EmailComponent,
@@ -61,18 +72,25 @@ const myFirebaseAuthConfig = {
 
 
 
+=======
+    AdminComponent
+>>>>>>> master
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
+<<<<<<< HEAD
     AuthModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
     AppRoutingModule,
 
 
+=======
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
+>>>>>>> master
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
