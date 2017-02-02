@@ -1,0 +1,183 @@
+
+<br><br><br><br>
+    <header [@fallIn]="state">
+      <button (click)="logout()" class="basic-btn">Logout</button>
+    </header>
+    <div id="page" [@moveInLeft]="state">
+      <h2>Hey {{ name.auth.displayName }}!</h2>
+
+      <button type="button" (click)="addVolunteer()" *ngIf="showButton">Add Volunteer</button>
+      <div *ngIf="volunteerFormShow">
+        <div class="row">
+          <h1>Add New Volunteer Opportunity</h1>
+          <h3>All fields are required</h3>
+        </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input type="text" #volunteertitle>
+                <label>Title</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" #volunteersiteUrl>
+                <label>Site URL</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" #volunteerimage>
+                <label>Image</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s3">
+                <input type="text" #volunteerdate>
+                <label>Date</label>
+              </div>
+              <div class="input-field col s3">
+                <input type="text" #volunteertime>
+                <label>Time</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" #volunteerlocation>
+                <label>Location</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" #volunteerdetailedLocation>
+                <label>Address</label>
+              </div>
+            </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" #volunteerdescription>
+                  <label>Short Event Description</label>
+                </div>
+              </div>
+            <button class="btn waves-effect waves-light"  (click)="submitVolunteerEvent(volunteerimage.value, volunteertitle.value, volunteerdate.value, volunteertime.value, volunteerlocation.value, volunteerdetailedLocation.value, volunteerdescription.value, volunteersiteUrl.value); volunteerimage.value=''; volunteertitle.value=''; volunteerdate.value=''; volunteertime.value=''; volunteerlocation.value=''; volunteerdetailedLocation.value=''; volunteerdescription.value=''; volunteersiteUrl.value=''; ">Add</button>
+            <button type="button" (click)="cancelForm()">Cancel</button>
+
+          </div>
+      <button type="button" (click)="addConnect()" *ngIf="showButton">Add New Connection</button>
+      <div *ngIf="connectFormShow">
+        <div class="row">
+          <div>
+            <h1>Add New Connection Opportunity</h1>
+            <h3>All fields are required</h3>
+          </div>
+        </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input type="text" #title>
+                <label>Title</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" #siteUrl>
+                <label>Site URL</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" #image>
+                <label>Image</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s3">
+                <input type="text" #date>
+                <label>Date</label>
+              </div>
+              <div class="input-field col s3">
+                <input type="text" #time>
+                <label>Time</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" #location>
+                <label>Location</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" #detailedLocation>
+                <label>Address</label>
+              </div>
+            </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" #description>
+                  <label>Short Event Description</label>
+                </div>
+              </div>
+            <button class="btn waves-effect waves-light"  (click)="submitConnectEvent(image.value, title.value, date.value, time.value, location.value, detailedLocation.value, description.value, siteUrl.value); image.value=''; title.value=''; date.value=''; time.value=''; location.value=''; detailedLocation.value=''; description.value=''; siteUrl.value=''; ">Add</button>
+            <button type="button" (click)="cancelForm()">Cancel</button>
+
+
+      </div>
+
+      <button type="button" (click)="addIssue()" *ngIf="showButton">Add New Issue</button>
+      <div *ngIf="actFormShow">
+        <div class="row">
+          <div>
+            <h1>Add New Issue</h1>
+            <h3>All fields are required</h3>
+          </div>
+        </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input type="text" #issue>
+                <label>Issue</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" #hyperlink>
+                <label>Site URL</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" #image>
+                <label>Image</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s3">
+                <input type="text" #name>
+                <label>Name</label>
+              </div>
+              <div class="input-field col s3">
+                <input type="text" #title>
+                <label>Profession</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" #state>
+                <label>State</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s3">
+                <input type="text" #phone>
+                <label>Phone</label>
+              </div>
+              <div class="input-field col s3">
+                <input type="text" #email>
+                <label>Email</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" #address>
+                <label>Address</label>
+              </div>
+            </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" #description>
+                  <label>Short Event Description</label>
+                </div>
+              </div>
+            <button class="btn waves-effect waves-light"  (click)="submitActEvent(image.value, issue.value, description.value, hyperlink.value, name.value, title.value, state.value, phone.value, email.value, address.value); image.value=''; issue.value=''; state.value=''; hyperlink.value=''; name.value=''; title.value=''; description.value=''; phone.value=''; email.value=''; address.value=''; ">Add</button>
+            <button type="button" (click)="cancelForm()">Cancel</button>
+
+
+      </div>
+    </div>

@@ -7,6 +7,11 @@ import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { MembersComponent } from './members/members.component';
+import { AuthGuard } from './auth.service';
+import { SignupComponent } from './signup/signup.component';
+import { EmailComponent } from './email/email.component';
 
 const appRoutes: Routes = [
   {
@@ -29,10 +34,16 @@ const appRoutes: Routes = [
     path: 'about',
     component: AboutComponent
   },
+
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'login-email', component: EmailComponent },
+  { path: 'members', component: MembersComponent, canActivate:  [AuthGuard] },
   {
     path: 'admin',
     component: AdminComponent
   }
+
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

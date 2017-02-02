@@ -9,9 +9,29 @@ import { ActComponent } from './act/act.component';
 import { VolunteerComponent } from './volunteer/volunteer.component';
 import { ConnectComponent } from './connect/connect.component';
 import { AboutComponent } from './about/about.component';
-import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { masterFirebaseConfig } from './api-keys';
+import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule }        from './app-routing.module';
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+import { AuthGuard } from './auth.service';
+import { LoginComponent } from './login/login.component'
+import { SignupComponent } from './signup/signup.component'
+import { EmailComponent } from './email/email.component'
+import { MembersComponent } from './members/members.component'
 import { AdminComponent } from './admin/admin.component';
+
+const appRoutes: Routes = [
+  {
+    path: 'act', component: ActComponent
+  },
+  {
+    path: 'volunteer', component: VolunteerComponent
+  },
+  {
+    path: 'connect', component: ConnectComponent
+  },
+]
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +45,6 @@ const myFirebaseAuthConfig = {
   method: AuthMethods.Redirect
 };
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +53,12 @@ const myFirebaseAuthConfig = {
     VolunteerComponent,
     ConnectComponent,
     AboutComponent,
+    LoginComponent,
+    SignupComponent,
+    EmailComponent,
+    MembersComponent,
+
+
     AdminComponent
   ],
   imports: [
@@ -41,9 +66,23 @@ const myFirebaseAuthConfig = {
     FormsModule,
     HttpModule,
     routing,
+
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
+    AppRoutingModule,
+
+
+
     AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  // Diagnostic only: inspect router configuration
+
+  // constructor(router: Router) {
+  //   console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  // }
+}
