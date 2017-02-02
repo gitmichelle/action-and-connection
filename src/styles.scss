@@ -11,7 +11,7 @@ $black: #2b2b2b;
 
 
 body {
-
+padding-top: 0 !important;
 }
 
 form-container {
@@ -105,12 +105,12 @@ h2 {
 
 
 @media (max-width: 600px) {
-    body {
-        padding-top:1.2em;
-    }
+    // body {
+    //     padding-top:1.2em;
+    // }
 
     .form-container {
-        padding:1.2em;
+        padding:2.4em;
         width:90%;
         margin-left:-45%;
     }

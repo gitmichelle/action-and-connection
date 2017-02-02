@@ -9,7 +9,13 @@ $white: #f6f7eb;
 $yellow: #ffd449;
 $black: #2b2b2b;
 $connect-blue: #0353A4;
+//media quaries
 
+$break-sm: 480px; //max
+$break-md: 768px; //min
+$break-Pro: "(min-width: 789px) and (max-width: 1279px)";
+$break-lg: 1280px; //max
+$break-xl: 1440px; //min
 //mixins
 @mixin flex($display: null, $justify: null, $align: null) {
   display: $display;
@@ -22,12 +28,13 @@ nav {
   background-color: white !important;
   border-bottom: 1px solid $red;
   height: 10vh;
-  padding: .5%;
+  // padding: .5%;
 
 }
 .nav-wrapper {
   background-color: white !important;
   font-family: $header-font;
+
   #plus {
     color: $red;
   }
@@ -39,6 +46,9 @@ nav {
     &:hover {
       transform: scale(1.1,1.1);
     }
+    @media screen and (max-width: $break-sm) {
+      display: none;
+     }
   }
   a {
     color: $blue !important;
