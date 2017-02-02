@@ -21,6 +21,7 @@ const authRoutes: Routes = [
     children: [
       {
         path: '',
+        canActivateChild: [AuthGuard],
         children: [
           { path: 'act', component: ActComponent },
           { path: 'volunteer', component: VolunteerComponent },
