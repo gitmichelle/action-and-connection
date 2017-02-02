@@ -11,8 +11,8 @@ $black: #2b2b2b;
 $connect-blue: #0353A4;
 //media quaries
 $break-sm: 480px; //max
-$break-md: 768px; //max
-// $break-Xmd: 1280px; //max
+$break-md: 768px; //min
+$break-Pro: "(min-width: 789px) and (max-width: 1279px)";
 $break-lg: 1280px; //max
 $break-xl: 1440px; //min
 
@@ -28,19 +28,22 @@ $break-xl: 1440px; //min
 .circle-links {
   height: 500px;
   @media screen and (max-width: $break-lg) {
-    // width: 175px;
     height: 175px;
-    // align-self: center;
    }
   @media screen and (max-width: $break-sm) {
     height: 850px;
    }
+   @media screen and (min-width: $break-md) {
+     height: 400px;
+    }
   .title-one{
     text-align: center;
     width: 100%;
     margin-top: 5%;
     font-family: $body-font;
-    color: $blue;
+    @media screen and (min-width: $break-md) {
+      margin-top: 7%;
+     }
     h2{
       color: $black;
       letter-spacing: 4px;
@@ -105,6 +108,11 @@ $break-xl: 1440px; //min
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      @media screen and (min-width: $break-md) {
+        margin: 3% ;
+        width: 200px;
+        height: 200px;
+       }
       @media screen and (max-width: $break-sm) {
         width: 175px;
         height: 175px;
@@ -132,6 +140,11 @@ $break-xl: 1440px; //min
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      @media screen and (min-width: $break-md) {
+        margin: 3% ;
+        width: 200px;
+        height: 200px;
+       }
       @media screen and (max-width: $break-sm) {
         width: 175px;
         height: 175px;
@@ -159,6 +172,11 @@ $break-xl: 1440px; //min
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      @media screen and (min-width: $break-md) {
+        margin: 3% ;
+        width: 200px;
+        height: 200px;
+       }
       @media screen and (max-width: $break-sm) {
         width: 175px;
         height: 175px;
@@ -199,16 +217,30 @@ $break-xl: 1440px; //min
     line-height: 130%;
     letter-spacing: 1px;
     font-size: 1.16em;
+    @media screen and (min-width: $break-md) {
+     font-size: 100%;
+     }
+       @media #{$break-Pro} {
+         font-size: 110%;
+       }
   }
 }
 
 .main {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   position: relative;
+=======
+
+>>>>>>> ui
   @media screen and (max-width: $break-sm) {
     display: none;
+  }
+  @media #{$break-Pro} {
+      margin-left: 150px;
    }
+<<<<<<< HEAD
    &:before {
     content: "";
     position: absolute;
@@ -224,25 +256,45 @@ $break-xl: 1440px; //min
     opacity: .5;
    }
 
+=======
+   @media screen and (min-width: $break-lg) {
+     margin-left: 200px;
+    //  background-color: pink;
+  }
+  @media screen and (min-width: $break-xl) {
+    margin-left: 300px;
+  }
+>>>>>>> ui
 
   .top {
     margin-left: 35%;
-    height: 27vh;
+    height: 25vh;
     background-color: white;
     margin-top: 12%;
     @media screen and (max-width: $break-lg) {
       margin-left: 5%;
      }
-     @media screen and (max-width: $break-md) {
-       margin-left: 10%;
-       margin-top: 20%;
+
+     @media screen and (min-width: $break-xl) {
+       margin-left: 300px;
+       margin-top: 5%;
+     }
+   @media #{$break-Pro} {
+       margin: 0;
+
+      //  background-color: pink;
+    }
+     @media screen and (min-width: $break-md) {
+       margin-left: 7%;
+       margin-top: 15%;
       }
     .box {
       height: 300px;
       width: 600px;
-      @media screen and (max-width: $break-md) {
+
+      @media screen and (min-width: $break-md) {
         height: 250px;
-        width: 500px;
+        width: 450px;
        }
       h4 {
         font-family: $header-font;
@@ -267,28 +319,63 @@ $break-xl: 1440px; //min
         width: 100px;
         background: white;
         transform: rotate(-20deg);
+        @media screen and (min-width: $break-md) {
+          display: none;
+        }
       }
-
-
       #phone {
         position: absolute;
-
         right: -290px;
         top: -99px;
         transform: rotate(-20deg);
+      @media #{$break-Pro} {
+          left: 555px;
+          top: -60px;
+          width: 200px;
+          transform: rotate(-25deg);
+         }
+        @media screen and (min-width: $break-md) {
+          left: 355px;
+          top: -60px;
+          width: 200px;
+          transform: rotate(-25deg);
+         }
         img {
           height: 400px;
-          @media screen and (max-width: $break-md) {
+        @media #{$break-Pro} {
+            height: 320px;
+            position: relative;
+            z-index: 1;
+           }
+          @media screen and (min-width: $break-md) {
             height: 300px;
+            position: relative;
+            z-index: 1;
            }
         }
+        .whiteBox {
+          height: 200px;
+          width: 100px;
+          background-color: white;
+          position: absolute;
+          top: 30px;
+          left: 80px;
 
+        }
         .calling {
           color: $black;
           position: absolute;
           top: 120px;
           left: 155px;
           letter-spacing: 2px;
+          @media screen and (min-width: $break-md) {
+            top: 100px;
+            left: 100px;
+           }
+         @media #{$break-Pro} {
+             top: 75px;
+             left: 93px;
+          }
         }
 
         .calling span {
@@ -327,6 +414,20 @@ $break-xl: 1440px; //min
     background-color: white;
     padding-left: 400px;
     padding-top: 125px;
+    @media screen and (min-width: $break-md) {
+      padding: 0;
+      left: 50px;
+    }
+    @media screen and (max-width: $break-lg) {
+     margin-top: 6%;
+     }
+     @media screen and (min-width: $break-xl) {
+       margin-top: 5%;
+     }
+     @media #{$break-Pro} {
+         height: 25vh;
+         margin: 0;
+      }
     .box {
       height: 300px;
       width: 550px;
@@ -335,6 +436,13 @@ $break-xl: 1440px; //min
       position: relative;
       margin-right: 20px;
       border: 3px solid $yellow;
+      @media screen and (min-width: $break-md) {
+        height: 250px;
+        width: 450px;
+        margin: 0;
+        left: 230px;
+        top: 50px;
+       }
 
       .overlay {
         position: absolute;
@@ -343,6 +451,11 @@ $break-xl: 1440px; //min
         height: 115px;
         width: 100px;
         background: $yellow;
+        @media screen and (min-width: $break-md) {
+          left: -150px;
+          top: 50px;
+          height: 100px;
+         }
       }
       .scroll-box {
       width: 100%;
@@ -366,8 +479,15 @@ $break-xl: 1440px; //min
         right: 500px;
         top: 0;
         transform: rotate(-20deg);
+        @media screen and (min-width: $break-md) {
+          left: -200px;
+          top: 50px;
+         }
         img {
           height: 350px;
+          @media screen and (min-width: $break-md) {
+            height: 250px;
+           }
         }
       }
     }
@@ -379,11 +499,24 @@ $break-xl: 1440px; //min
     height: 30vh;
     background-color: white;
     margin-top: 10%;
+<<<<<<< HEAD
     margin-bottom: 20%;
     @media screen and (max-width: $break-lg) {
       margin-left: 10%;
       margin-top: 15%;
+=======
+    @media #{$break-Pro} {
+        margin-top: 0;
+>>>>>>> ui
      }
+     @media screen and (min-width: $break-md) {
+      margin-top: 5%;
+      margin-left: 7%;
+      }
+      @media screen and (max-width: $break-lg) {
+       margin-top: 8%;
+       margin-left: 7%;
+       }
   }
   .box {
     height: 300px;
@@ -393,6 +526,10 @@ $break-xl: 1440px; //min
     position: relative;
     margin-right: 20px;
     border: 3px solid $blue;
+    @media screen and (min-width: $break-md) {
+      height: 250px;
+      width: 450px;
+     }
 
     h4 {
       font-family: $header-font;
@@ -414,15 +551,28 @@ $break-xl: 1440px; //min
       background: white;
       transform: rotate(90deg);
       border-radius: 25%;
+      @media screen and (min-width: $break-md) {
+        height: 150px;
+        width: 100px;
+        left: 413px;
+        top: 150px;
+       }
     }
 
     #hands-hold {
       position: absolute;
       left: 320px;
       top: 0;
-      // transform: rotate(-25deg);
+      @media screen and (min-width: $break-md) {
+        left: 300px;
+        top: 25px;
+       }
       img {
         height: 550px;
+        @media screen and (min-width: $break-md) {
+          height: 375px;
+
+         }
       }
     }
   }
