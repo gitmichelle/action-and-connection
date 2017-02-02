@@ -8,31 +8,40 @@
         <p class="headline">social issue:</p>
         <p class="issue">{{issue.issue}}<p>
       </div>
-      <h5>About the issue:</h5>
-      <p>{{issue.description}} <a href="{{issue.hyperlink}}"><em>Source</em></a></p>
-      <h5>Who to contact:</h5>
+      <h5 id="aboutTheIssue">About the issue:</h5>
+      <p>{{issue.description}}<a href="{{issue.hyperlink}}"><em> Source</em></a></p>
 
+      <h5 id="whoToContact">Who to contact:</h5>
       <div class="flex-container">
         <div class="flex-item">
-          <img src="{{issue.image}}">
+          <img src="{{issue.image}}" style=" width: 15.625em;
+          height: 15.625em;
+          border-radius: 50%;
+          background-position: center;
+          background-size: cover;">
           <div>
             <ul class="infoList">
-              <li>Name: {{issue.name}}</li>
-              <li>Title: {{issue.title}}</li>
-              <li>State: {{issue.state}}</li>
-              <li>Phone: {{issue.phone}}</li>
-              <li>Email: {{issue.email}} </li>
-              <li>Address: {{issue.address}}</li>
+              <li><span class="label">Name:  </span>{{issue.name}}</li>
+              <li><span class="label">Title: </span>{{issue.title}} </li>
+              <li><span class="label">State: </span>{{issue.state}} </li>
+              <li><span class="label">Phone: </span>{{issue.phone}} </li>
+              <li><span class="label">Email: </span>{{issue.email}} </li>
+              <li><span class="label">Address:  </span>{{issue.address}}</li>
             </ul>
           </div>
         </div>
       </div>
 
+      <div class="whatTo">
+        <div class="buttons">
+          <h5>What to say:</h5>
+          <a class="waves-effect waves-light btn">  CALL SCRIPT</a>
+        </div>
+        <div class="buttons">
+          <h5>What to write:</h5>
+          <a class="waves-effect waves-light btn">  EMAIL/LETTER SCRIPT</a>
+        </div>
+      </div>
     </div>
   </div>
-<<<<<<< HEAD
 </div>
-=======
-
-  </div>
->>>>>>> db0f6c0e20ac75b1ca4977c4a8a0301bc7805379
