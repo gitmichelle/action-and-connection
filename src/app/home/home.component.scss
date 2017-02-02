@@ -12,7 +12,8 @@ $connect-blue: #0353A4;
 //media quaries
 $break-sm: 480px; //max
 $break-md: 768px; //max
-$break-lg: 1439px; //max
+// $break-Xmd: 1280px; //max
+$break-lg: 1280px; //max
 $break-xl: 1440px; //min
 
 //mixins
@@ -214,7 +215,7 @@ $break-xl: 1440px; //min
     background-color: white;
     margin-top: 12%;
     @media screen and (max-width: $break-lg) {
-      margin-left: 10%;
+      margin-left: 5%;
      }
      @media screen and (max-width: $break-md) {
        margin-left: 10%;
