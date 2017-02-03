@@ -131,7 +131,8 @@ h3 {
             border-radius: 50%;
             background-image: url('assets/image/merkeley.jpg');
             background-position: center;
-            background-size: cover;
+            background-size: contain;
+
           }
 
           .infoList {
@@ -201,6 +202,11 @@ h3 {
       margin-top: 2em;
       width: 100%;
 
+      .btn {
+        background-color: darken($blue, 10%);
+      }
+
+
       .buttons {
 
         @media screen and (max-width: $break-sm) {
@@ -215,7 +221,7 @@ h3 {
         }
 
         .btn {
-          background-color: darken($blue, 10%);
+          background-color: $blue !important;
           color: white;
           padding: .75em;
           width: 40%;

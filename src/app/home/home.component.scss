@@ -229,6 +229,7 @@ $break-xl: 1440px; //min
 }
 
 .main {
+  margin-left: 5%;
   display: flex;
   flex-direction: column;
 
@@ -239,7 +240,7 @@ $break-xl: 1440px; //min
       margin-left: 150px;
    }
    @media screen and (min-width: $break-lg) {
-     margin-left: 200px;
+     margin-left: 250px;
     //  background-color: pink;
   }
   @media screen and (min-width: $break-xl) {
@@ -341,6 +342,10 @@ $break-xl: 1440px; //min
 
         }
         .calling {
+          @media screen and (min-width: $break-lg) {
+              left: 150px;
+           //  background-color: pink;
+         }
           color: $black;
           position: absolute;
           top: 120px;
