@@ -6,7 +6,7 @@
 
 ## Description
 
-_This past election has left many people wanting to get more politically involved without a clear idea where to start. With our Action + Connection web app, we aim to give those people some direction. This admin focused site has three main objectives: to inform people on the latest issue facing the nation and who to contact about it; to list volunteer opportunities in the Portland area to help you get more involved politicially; to list social events and movements in the Portland area to help you connect with like-minded people. The administer can add issues and events themselves, but users can sign up to the site to add events as well. _
+This past election has left many people wanting to get more politically involved without a clear idea where to start. With our Action + Connection web app, we aim to give those people some direction. This admin focused site has three main objectives: to inform people on the latest issue facing the nation and who to contact about it; to list volunteer opportunities in the Portland area to help you get more involved politicially; to list social events and movements in the Portland area to help you connect with like-minded people. The administer can add issues and events themselves, but users can sign up to the site to add events as well. 
 
 ## Prerequisites
 
